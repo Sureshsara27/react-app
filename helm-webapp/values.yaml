@@ -1,0 +1,27 @@
+appName: myhelmapp
+image:
+  repository: Sureshsara27/react-app
+  tag: va.0
+
+replicaCount: 2
+
+service:
+  type: ClusterIP
+  port: 3000
+
+route:
+  enabled: true
+  host: reactapp.example.com
+
+rbac:
+  enabled: true
+
+resources:
+  limits:
+    memory: "256Mi"
+    cpu: "500m"
+  requests:
+    memory: "128Mi"
+    cpu: "250m"
+
+namespace: react-app
