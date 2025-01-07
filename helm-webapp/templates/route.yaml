@@ -1,14 +1,14 @@
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-  name: {{ .Release.Name }}-react-app-route
+  name: {{ .values.appName }}-react-app-route
   namespace: {{ .Values.namespace }}
   labels:
-    app: {{ .Release.Name }}-react-app
+    app: {{ .values.appName }}-react-app
 spec:
   to:
     kind: Service
-    name: {{ .Release.Name }}-react-app-service
+    name: {{ .values.appName }}-react-app-service
   host: {{ .Values.route.host }}
   port:
     targetPort: 3000

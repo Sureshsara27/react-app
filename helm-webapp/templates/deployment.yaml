@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Release.Name }}-react-app
+  name: {{ .values.appName }}-react-app
   namespace: {{ .Values.namespace }}
   labels:
-    app: {{ .Release.Name }}-react-app
+    app: {{ .values.appName }}-react-app
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: {{ .Release.Name }}-react-app
+      app: {{ .values.appName }}-react-app
   template:
     metadata:
       labels:
-        app: {{ .Release.Name }}-react-app
+        app: {{ .values.appName }}-react-app
     spec:
-      serviceAccountName: {{ .Release.Name }}-sa
+      serviceAccountName: {{ .values.appName }}-sa
       containers:
       - name: react-app
         image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
