@@ -4,6 +4,10 @@ image:
   tag: va.0
 
 replicaCount: 2
+configmap:
+   name: webapp
+   data:
+     CUSTOM_HEADER: "welcome to React app"
 
 service:
   type: ClusterIP
