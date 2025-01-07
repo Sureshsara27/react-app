@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ .values.appName }}-react-app-service
+  name: {{ .Values.appName }}-react-app-service
   namespace: {{ .Values.namespace }}
   labels:
-    app: {{ .values.appName }}-react-app
+    app: {{ .Values.appName }}-react-app
 spec:
   selector:
-    app: {{ .values.appName }}-react-app
+    app: {{ .Values.appName }}-react-app
   ports:
   - protocol: TCP
     port: {{ .Values.service.port }}

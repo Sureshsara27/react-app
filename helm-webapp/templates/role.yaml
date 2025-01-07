@@ -1,10 +1,10 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
-  name: {{ .values.appName }}-role
+  name: {{ .Values.appName }}-role
   namespace: {{ .Values.namespace }}
   labels:
-    app: {{ .values.appName }}-react-app
+    app: {{ .Values.appName }}-react-app
 rules:
 - apiGroups: [""]
   resources: ["pods", "services", "configmaps", "endpoints"]
