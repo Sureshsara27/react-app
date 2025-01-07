@@ -1,4 +1,4 @@
-appName: myhelmapp
+appName: webapp
 image:
   repository: Sureshsara27/react-app
   tag: va.0
