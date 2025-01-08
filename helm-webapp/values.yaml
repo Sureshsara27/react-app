@@ -1,7 +1,7 @@
 appName: webapp
 image:
   name: eyesoncloud/webapp
-  tag: va.0
+  tag: 34
 
 replicaCount: 2
 configmap:
