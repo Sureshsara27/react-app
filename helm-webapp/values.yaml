@@ -1,6 +1,7 @@
 appName: webapp
 image:
   repository: Sureshsara27/react-app
+  name: eyesoncloud/webapp
   tag: va.0
 
 replicaCount: 2
