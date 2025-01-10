@@ -18,7 +18,7 @@ spec:
       serviceAccountName: {{ .Values.appName }}-sa
       containers:
       - name: react-app
-        image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+        image: {{ .Values.image.name }}:{{ .Values.image.tag }}
         ports:
         - containerPort: 3000
         resources:
